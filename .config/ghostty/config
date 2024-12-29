@@ -1,0 +1,58 @@
+font-family = Agave Nerd Font
+font-size = 20
+theme = Banana Blueberry
+shell-integration-features = no-cursor,sudo,no-title
+cursor-style = block
+adjust-cell-height = 35%
+# background-opacity = 0.96
+
+mouse-hide-while-typing = true
+mouse-scroll-multiplier = 2
+
+window-padding-balance = true 
+window-save-state = always
+
+macos-option-as-alt = true
+macos-titlebar-style=transparent
+
+window-colorspace = "display-p3"
+# background = 1C2021
+# foreground = d4be98
+
+# keybindings
+keybind = cmd+s>r=reload_config
+keybind = cmd+s>x=close_surface
+
+keybind = cmd+s>n=new_window
+
+# tabs 
+keybind = ctrl+space>c=new_tab
+keybind = ctrl+space>l=next_tab
+keybind = ctrl+space>h=previous_tab
+keybind = ctrl+space>comma=move_tab:-1
+keybind = ctrl+space>period=move_tab:1
+
+# quick tab switch
+keybind = cmd+s>1=goto_tab:1
+keybind = cmd+s>2=goto_tab:2
+keybind = cmd+s>3=goto_tab:3
+keybind = cmd+s>4=goto_tab:4
+keybind = cmd+s>5=goto_tab:5
+keybind = cmd+s>6=goto_tab:6
+keybind = cmd+s>7=goto_tab:7
+keybind = cmd+s>8=goto_tab:8
+keybind = cmd+s>9=goto_tab:9
+
+# split
+keybind = ctrl+space>\=new_split:right
+keybind = ctrl+space>-=new_split:down
+
+keybind = alt+down=goto_split:bottom
+keybind = alt+up=goto_split:top
+keybind = alt+left=goto_split:left
+keybind = alt+right=goto_split:right
+
+keybind = ctrl+space>e=equalize_splits
+
+# other
+copy-on-select = clipboard

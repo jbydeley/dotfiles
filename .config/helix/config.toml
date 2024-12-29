@@ -1,0 +1,48 @@
+theme = "nightfox"
+
+[editor]
+true-color = true
+gutters = ["diff", "diagnostics", "line-numbers", "spacer"]
+line-number = "absolute"
+bufferline = "multiple"
+# auto-save = true
+
+[editor.soft-wrap]
+enable = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.indent-guides]
+character = "|"
+render = true
+
+[editor.lsp]
+auto-signature-help = true
+display-inlay-hints = true
+display-messages = true
+
+[editor.file-picker]
+hidden = false
+ignore = true
+git-ignore = true
+
+[editor.whitespace.render]
+space = "none"
+tab = "none"
+newline = "none"
+
+[editor.statusline]
+left = ["mode", "version-control", "spinner"]
+center = ["file-name", "file-modification-indicator"]
+right = ["diagnostics", "selections", "file-encoding", "file-line-ending", "file-type"]
+
+[keys.normal]
+C-g = [":new", ":insert-output git diff", ":buffer-close!", ":redraw"]
+C-p = "file_picker_in_current_directory"
+C-j = "jumplist_picker"
+Y = "yank_main_selection_to_clipboard"
+"A-z" = "goto_previous_buffer"
+"A-x" = "goto_next_buffer"
