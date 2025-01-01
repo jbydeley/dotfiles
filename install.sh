@@ -22,6 +22,32 @@ get_os() {
     fi
 }
 
+# Function to install Helix based on OS
+install_helix() {
+    local os_type=$(get_os)
+
+    echo "Installing Helix..."
+
+    case $os_type in
+        "mac")
+            if ! command -v brew &> /dev/null; then
+                echo "Homebrew not found. Installing Homebrew..."
+                /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+            fi
+            brew install helix
+            ;;
+        "debian")
+            sudo add-apt-repository -y ppa:maveonair/helix-editor
+            sudo apt update
+            sudo apt install -y helix
+            ;;
+        *)
+            echo "Unsupported operating system for Helix installation"
+            exit 1
+            ;;
+    esac
+}
+
 # Function to install a package based on OS
 install_package() {
     local package_name=$1
@@ -64,6 +90,16 @@ main() {
             echo "$package is already installed"
         fi
     done
+
+    # Install Helix if not already installed
+    if ! command -v hx &> /dev/null; then
+        read -p "Would you like to install Helix editor? (y/n) " answer
+        if [[ "$answer" =~ ^([yY]|[yY][eE][sS])$ ]]; then
+            install_helix
+        fi
+    else
+        echo "Helix is already installed"
+    fi
 
     # Set zsh as default shell if not already
     if [ "$SHELL" != "$(which zsh)" ]; then
