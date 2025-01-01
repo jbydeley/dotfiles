@@ -78,6 +78,9 @@ main() {
     # List of packages to install
     packages=("zsh" "git" "stow" "tmux" "bat")
 
+    # On ubuntu, the installed bat is `batcat` so this is a bug where we will always ask to install it. 
+    # SHOULDDO: Use nix package manager to manage dependencies instead of trying to guess per OS.
+
     # Install each package if not already installed
     for package in "${packages[@]}"; do
         if ! command -v "$package" &> /dev/null; then
