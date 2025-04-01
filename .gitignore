@@ -1,0 +1,5 @@
+.config/.wrangler/
+.config/go/
+.config/ngrok/
+.zsh/completions/
+
