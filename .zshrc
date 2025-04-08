@@ -20,6 +20,7 @@ source $HOME/.zsh/history.zsh
 source $HOME/.zsh/styles.zsh
 source $HOME/.zsh/aliases.zsh
 source $HOME/.zsh/git.zsh
+source $HOME/.zsh/functions.zsh
 
 # Shell integrations
 eval "$(fzf --zsh)"
