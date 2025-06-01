@@ -13,4 +13,3 @@ bindkey '^[[5D' backward-word # Another common one
 # For Ctrl + Right Arrow (forward-word)
 bindkey '^[[1;5C' forward-word
 bindkey '^[[5C' forward-word # Another common one
-
