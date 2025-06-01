@@ -16,7 +16,7 @@ alias gc="git commit"
 alias gp="git push"
 alias gu="git pull"
 
-alias gl="git log"
+alias gl="git log --all --graph --pretty=format:'%C(magenta)%h %C(white) %an  %ar%C(auto)  %D%n%s%n'"
 alias gco="git checkout"
 
 alias gi="git init"

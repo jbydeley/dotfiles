@@ -1,0 +1,100 @@
+[init]
+	defaultBranch = main
+
+[include]
+	# Load personal configuration
+	path = ~/.gitconfig.local
+
+[alias]
+	t = worktree
+	l = log --oneline --graph --decorate --all
+	undo = reset --soft HEAD^
+
+[color "diff"]
+	meta = black bold
+	frag = magenta
+	context = white
+	whitespace = yellow reverse
+	old = red
+
+[interactive]
+	diffFilter = diff-so-fancy --patch
+	singlekey = true
+
+[rerere]
+	enabled = true
+
+[help]
+	autocorrect = 1
+
+[color]
+	ui = auto
+
+[core]
+	editor = hx
+	pager = diff-so-fancy | less --tabs=4 -RFX
+
+[pager]
+	branch = false
+	tag = false
+
+[gpg]
+	format = ssh
+
+# Command configs
+
+[status]
+	branch = true
+	showStash = true
+	showUntrackedFiles = all
+
+[diff]
+	context = 3
+	renames = copies
+	interHunkContext = 10
+
+[diff-so-fancy]
+	markEmptyLines = false
+
+[push]
+	autoSetupRemote = true
+
+[pull]
+	rebase = true
+
+[fetch]
+	prune = true
+
+[rebase]
+	autoStash = true
+	missingCommitsCheck = warn
+
+[log]
+	abbrevCommit = true
+	graphColors = blue,yellow,cyan,magenta,green,red
+
+[color "decorate"]
+	HEAD = red
+	branch = blue
+	tag = yellow
+	remoteBranch = magenta
+
+[branch]
+	sort = -committerdate
+
+[color "branch"]
+	current = magenta
+	local = default
+	remote = yellow
+	upstream = green
+	plain = blue
+
+[tag]
+	sort = -taggerdate
+
+[commit]
+	gpgsign = true
+	template = "~/.config/git/templates/commit.md"
+
+[url "git@github.com:"]
+	insteadOf = gh:

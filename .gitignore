@@ -1,5 +1,6 @@
 .config/.wrangler/
 .config/go/
 .config/ngrok/
-.zsh/completions/
+.config/htop/
 
+.zsh/completions/
