@@ -7,6 +7,7 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias z="cd"
 
+# Git
 alias gd="git diff --output-indicator-new=' ' --output-indicator-old=' '"
 alias gs="git status --short"
 
@@ -21,3 +22,9 @@ alias gco="git checkout"
 
 alias gi="git init"
 alias gcl="git clone"
+
+# Tmux
+alias tn="tmux new-session -s"
+alias tl="tmux list-sessions"
+alias ta="tmux attach-session"
+
