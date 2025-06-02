@@ -1,3 +1,6 @@
 {
-  "telemetry_enabled": false,
+  "telemetry_enabled": true,
+  "telemetry_id": "63ff7203d34d7caf91c192bd17f40f216bec4e801f564af76f8e4d8a4b962fa5",
+  "telemetry_salt": "0adb3452-3ec1-4fa8-883d-7aa0ff738397",
+  "telemetry_alerted": "2025-06-01T20:35:09.061287787Z"
 }
