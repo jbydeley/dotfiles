@@ -1,5 +1,8 @@
 export PATH=$PATH:$HOME/.local/bin
 
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
 # Set Helix as the default editor
 export EDITOR="hx"
 export VISUAL="hx"

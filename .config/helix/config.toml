@@ -1,9 +1,9 @@
-theme = "nightfox"
+theme = "monokai_pro_octagon"
 
 [editor]
 true-color = true
 gutters = ["diff", "diagnostics", "line-numbers", "spacer"]
-line-number = "absolute"
+line-number = "relative"
 bufferline = "multiple"
 # auto-save = true
 
